@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,900&display=swap"
+        rel="stylesheet">
+    <title>KK,s Portfolio</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(20, 7, 31);
+        color: aliceblue;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(0, 151, 206);
+        color: black;
+        height: 60px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 23px;
+        list-style: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    nav ul li a:hover {
+        color: rgb(0, 0, 0);
+        font-size: 1.02rem;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+    .left img{
+        width: 34px;
+        height: 27px;
+        
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-around;
+        margin: 80px 0;
+        align-items: center;
+    }
+
+    .firstsec>div {
+        width: 30%;
+    }
+
+    .leftsec {
+
+        font-size: 2.5rem;
+
+    }
+
+    .leftsec .buttons{
+        padding: 25px;
+        
+    }
+
+    .leftsec .btn {
+        padding: 12px;
+        color: white;
+        background: #34005b;
+        padding: 12px;
+        border: 2px solid rgb(172, 169, 169);
+        border-radius: 6px;
+        font-size: 19px;
+        cursor: pointer;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+
+
+    .rightsec img {
+        width: 300px;
+        margin: 50px 0;
+    }
+
+    .ppl {
+        color: rgb(255, 201, 134);
+    }
+
+    .gry {
+        color: gray;
+    }
+
+    #element {
+        color: rgb(255, 201, 134);
+    }
+
+    .secsection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+    }
+
+    .secsection .box {
+        background: white;
+        width: 80vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+
+    }
+
+    .secsection .vertical {
+        height: 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0 120px;
+    }
+
+
+    .image-top {
+        width: 23px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+    }
+
+    .vertical-title {
+        position: relative;
+        top: 75px;
+        width: 150px;
+
+    }
+
+    .vertical-desc {
+        position: relative;
+        top: 86px;
+        color: gray;
+        width: 150px;
+        font-size: 8px;
+
+    }
+
+    footer {
+        background-color: rgb(52, 57, 57);
+
+    }
+
+    .footer {
+        display: flex;
+        padding: 23px 122px;
+        justify-content: space-evenly;
+    }
+
+    .footer ul li{
+        list-style: none;
+        font-size: 10px;
+        opacity: 0.8;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 3px;
+    }
+
+    .footer>div {
+        width: 223px
+    }
+
+    footer .footer-rights {
+        text-align: center;
+        padding: 12px 0;
+
+    }
+
+    .footer img{
+        inline-size: 11px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="kklogo.png" alt=""></div>
+            <div class="right">
+                <ul>
+                    <li><a href="portp.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <div class="leftsec"> Hi, My name is <span class="ppl">Krishnakumar</span>
+                <div> and I am a</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="resume.html" style="text-decoration: none; color: aliceblue;">Resume</a></button>
+                    <button class="btn" ><a href="https://github.com/Krishnakumar-Naik" style="text-decoration: none; color: aliceblue;">Visit Github</a></button>
+                </div>
+            </div>
+            <div class="rightsec">
+                <img src="kk.png" alt="">
+            </div>
+        </section>
+
+        <section class="secsection">
+            <span class="gry"></span>
+            <h1>Software Knowladge</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img src="" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML 
+                    </div>
+                    <div class="vertical-desc">
+                        Started basic HTML works,learned css,js.Done some basic web Projects.I can develope or create
+                        Website for Business,Marketing,Information sharing,Data sharing,etc,.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Python programming
+                    </div>
+                    <div class="vertical-desc">
+                        As a basic Python programmer, I possess a foundational understanding of Python programming concepts and syntax.With a solid grasp of the basics, I am ready to take on more complex challenges and continue honing my Python programming abilities.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Java
+                    </div>
+                    <div class="vertical-desc">
+                        As a basic Java programmer, I possess foundational skills in Java programming language, enabling me to develop simple yet effective applications. I am eager to expand my knowledge and continue honing my skills in Java development.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="" alt="" class="image-top">
+                    <div class="vertical-title">
+                        C programming
+                    </div>
+                    <div class="vertical-desc">
+                        As a basic C programmer, I possess fundamental proficiency in the C programming language, demonstrating a solid understanding of key concepts such as variables, data types, loops, and conditional statements. I am poised to further develop my skills and contribute effectively to programming projects.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="firstft">
+                <h3>Krishnakumar's Portfolio</h3>
+            </div>
+            <div class="sec">
+                <ul>
+                    Social <br> <br>
+                    <li> <img src="insta.png" alt="Instagram"> Instagram</li>
+                    <li><img src="facebook.png" alt="Instagram">Facebook</li>
+                    <li><img src="linkedin.png" alt="Instagram">Linkedin</li>
+                    <li></li>
+
+                </ul>
+            </div>
+            <div class="third">
+                <ul>
+                    Resource <br> <br>
+                    <li>Blog</li>
+                    <li>What's new</li>
+                    <li>Free templates</li>
+                    <li>design's</li>
+
+                </ul>
+            </div>
+            <div class="fourt">
+                <ul>
+                    Activity <br> <br>
+                    <li>Honor</li>
+                    <li>Influace</li>
+                    <li>Brandings</li>
+                    <li>Projects</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights" style="opacity: 0.5; font-family: 'Courier New', Courier, monospace;">
+            Copyriht &#169;krishnasportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Basic Web Developer', 'Basic Web Designer', 'Video Editor','Basic Programmer'],
+            typeSpeed: 50,
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
