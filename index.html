@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(back2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(255, 245, 245);
+
+        }
+
+        .container {
+            color: aliceblue;
+            width: 50%;
+            margin: 40px auto;
+            background-image: url(back3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .submit {
+            background-color: rgb(99, 0, 145);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit:hover {
+            background-color: darkgreen;
+
+        }
+
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">REGISTRATION FORM</h1>
+    <div class="container">
+        <form id="myForm" onsubmit="validateForm(event)">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span id="nameError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span id="emailError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile">
+                <span id="mobileError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="" hidden>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <span id="genderError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <span id="passwordError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="submit" style="border-radius: 40px; ">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let mobile = document.getElementById('mobile').value;
+            let gender = document.getElementById('gender').value;
+            let password = document.getElementById('password').value;
+
+            let nameError = document.getElementById('nameError');
+            let emailError = document.getElementById('emailError');
+            let mobileError = document.getElementById('mobileError');
+            let genderError = document.getElementById('genderError');
+            let passwordError = document.getElementById('passwordError');
+
+            nameError.textContent = '';
+            emailError.textContent = '';
+            mobileError.textContent = '';
+            genderError.textContent = '';
+            passwordError.textContent = '';
+
+            let isValid = true;
+
+            if (name === '') {
+                nameError.textContent = 'Name is required';
+                isValid = false;
+            }
+
+            if (email === '') {
+                emailError.textContent = 'Email is required';
+                isValid = false;
+            } else {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    emailError.textContent = 'Enter a valid email address';
+                    isValid = false;
+                }
+            }
+
+            if (mobile === '') {
+                mobileError.textContent = 'Mobile number is required';
+                isValid = false;
+            }
+
+            if (gender === '') {
+                genderError.textContent = 'Please select gender';
+                isValid = false;
+            }
+
+            if (password === '') {
+                passwordError.textContent = 'Password is required';
+                isValid = false;
+            }
+
+            if (isValid) {
+                window.alert('Form submitted successfully');
+
+            }
+        }
+    </script>
+</body>
+
+</html>
