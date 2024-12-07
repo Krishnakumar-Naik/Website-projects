@@ -1,0 +1,17 @@
+E086 Sri Sairam College of Engineering(Formerly Shirdi Sai Engg) Anekal,Bangalore(is-78)
+E102 DONBOSCO Institute of Technology Bangalore(41)
+E106 East West Institute of Technology Bangalore(54)
+E109 City Engineering College Bangalore(69)
+E112 Sri Krishna Institute of Technology Bangalore(is-91k)
+E113 Sambhram Institute of Technology Bangalore(75)
+E127 M S Engineering College Bangalore Urban(75)
+E129 St. Joseph Engineering College Mangalore(ds-43)
+E136 Moodalakatte Institute of Technology Udupi District(67)
+E139 Impact College of Engineering and Applied Sciences Bangalore(ds-1l)
+E144 Srinivas Institute of Technology Mangalore
+E175 S.G.Balekundri Institute of Technology Belgaum(54)
+E186 ACS College of Engineering Kengeri Hobli,Bangalore(60)
+E193 Srinivas University Mukka, Suratkal, Mangalore(82)
+E222 Cambridge Institutute of Technology-North Campus Devanahalli(TQ),Bangalore(R)(59)
+E237 Presidency University Yelahanka, Bangalore
+E252 Mysore College of Engineering and Management Mysore(is-91)

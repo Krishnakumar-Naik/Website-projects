@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="prof.css">
+    <title>Sports page profile</title>
+</head>
+<div class="navbar">
+    <div class="navdiv">
+    <li>
+        <button id="prof"><a href="profille.html">PROFILE</a></button>
+    </li>
+        <h1 id="logo"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sports Knowledge</h1>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<body align="center" style="background-color: black; color: burlywood;">
+    <h1>Your Profile</h1>
+    <form id="profileForm">
+        <div align="center" class="pic"><img src="image.png"/><br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="file"/>
+        </div><br>
+        <br>
+
+        <div class="textbox"><tr><td><label for="name"><h2>NAME:</h2></label></td>
+        &nbsp;&nbsp;&emsp;<td><input type="text" id="name" required></td>
+        </tr><br></div><br>
+
+        <div class="textbox"><tr><td><label for="age"><h2>AGE:</h2></label></td>
+        &emsp;&nbsp;&emsp;<td><input type="number" id="age" required></td>
+        </tr></div><br><br>
+
+        <div class="textbox"><tr><td><label for="location"><h2>LOCATION:</h2></label></td>
+            &emsp;<td><input type="text" id="location" required></td></tr></div><br><br>
+
+        <div class="textbox"><tr><td><label for="occupation"><h2>OCCUPATION:</h2></label></td>
+        <td><input type="text" id="occupation" required></td></tr></div><br><br>
+
+        <button type="submit" style="background-color: rgb(2, 214, 214);color: black; transition: all; border-radius: 20px; width: 180px;"><b>Create Profile</b></button>
+    </form>
+
+    <div id="profileResult" style="display: none;">
+        <p>Name: <span id="profileName"></span></p>
+        <p><strong>Age:</strong> <span id="profileAge"></span></p>
+        <p><strong>Location:</strong> <span id="profileLocation"></span></p>
+        <p><strong>Occupation:</strong> <span id="profileOccupation"></span></p>
+    </div>
+    <div align="right">
+        <a href="sporthome.html"><button id="hmbtn" style="color: rgb(0, 41, 41); background-color: burlywood;"><b>home</b></button></a>
+    </div>
+
+    <script>
+        const profileForm = document.getElementById("profileForm");
+        const profileResult = document.getElementById("profileResult");
+        const profileNameSpan = document.getElementById("profileName");
+        const profileAgeSpan = document.getElementById("profileAge");
+        const profileLocationSpan = document.getElementById("profileLocation");
+        const profileOccupationSpan = document.getElementById("profileOccupation");
+
+        const image = document.querySelector("img"),
+                 input = document.querySelector("input");
+
+                 input.addEventListener("change",()=>{
+                 image.src = URL.createObjectURL(input.files[0]);   
+                 })
+
+        profileForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get input values from the form
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const location = document.getElementById("location").value;
+            const occupation = document.getElementById("occupation").value;
+
+            // Display the profile information
+    
+            profileNameSpan.textContent = name;
+            profileAgeSpan.textContent = age;
+            profileLocationSpan.textContent = location;
+            profileOccupationSpan.textContent = occupation;
+
+            // Hide the form and show the profile result
+            profileForm.style.display = "none";
+            profileResult.style.display = "block";
+        });
+    </script>
+</body>
+</html>

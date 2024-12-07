@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Glassmorphism Login form</title>
+  <link rel="stylesheet" href="logincss.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+  <div class="form-box">
+    <div class="form-value">
+      <form action="" id="loginForm">
+        <h2>Login</h2>
+        <div class="inputbox">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" id="username" name="username" required>
+          <label for="">Email</label>
+        </div>
+        <div class="inputbox">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" id="password" name="password" required>
+          <label for="password">Password</label>
+        </div>
+        <div class="forget">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+          <label>
+            <a href="#">Forgot password?</a>
+          </label>
+        </div>
+        <button type="submit">Log in</button>
+        <div class="register">
+          <p>Don't have a account ? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Replace the following lines with your server-side authentication logic
+        // For this example, we'll assume the username is "admin" and password is "password"
+        if (username === "Gojo@portfolio.page" && password === "Gojo@123") {
+            window.location.href ="home.html"
+            // You can redirect the user to a dashboard or any other page after successful login
+            // Example: window.location.href = "dashboard.html";
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    }
+    );
+</script>
+</body>
+</html>
