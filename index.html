@@ -27,7 +27,7 @@
             background-size: cover;
             padding: 50px;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -133,6 +133,7 @@
 
             let isValid = true;
 
+            //If user not fill any details
             if (name === '') {
                 nameError.textContent = 'Name is required';
                 isValid = false;
@@ -142,6 +143,7 @@
                 emailError.textContent = 'Email is required';
                 isValid = false;
             } else {
+                //To get valod email
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(email)) {
                     emailError.textContent = 'Enter a valid email address';
